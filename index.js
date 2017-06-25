@@ -2,11 +2,11 @@
 
 var gowin = require('commander');
 
-var out = require('./lib/output');
+var _output = require('./lib/output');
 var processing = require('./lib/process');
 
 // Launch!
-console.log('[gowin/launch] gowin has touchdown.');
+_output.log('launch', 'gowin has touchdown.');
 
 // Accepting arguments
 gowin.arguments("<launch-string>")

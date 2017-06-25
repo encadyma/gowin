@@ -2,7 +2,10 @@
 /* Example plugin configuration:
 exports.config = plugin.configurePlugin({
   name: "Slack",
-  slug: "slack"
+  slug: "slack",
+  store: {
+    usingStore: false/true
+  }
 });
 */
 
@@ -14,6 +17,12 @@ exports.configurePlugin = function(config) {
     },
     getName: function() {
       return config.name;
+    },
+    hasStore: function() {
+      return config.store.usingStore;
+    },
+    getDefaultStore: function() {
+      return config.store;
     }
   }
 }
