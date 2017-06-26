@@ -1,3 +1,5 @@
+// Copyright (c) 2017 Kevin Mo. All rights reserved.
+
 // Array of plugins
 var slack = require('./slack');
 

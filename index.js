@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+// Copyright (c) 2017 Kevin Mo. All rights reserved.
+
 var gowin = require('commander');
 
 var _output = require('./lib/output');

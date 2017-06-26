@@ -1,12 +1,15 @@
+// Copyright (c) 2017 Kevin Mo. All rights reserved.
 
 /* Example plugin configuration:
+
 exports.config = plugin.configurePlugin({
-  name: "Slack",
-  slug: "slack",
+  name: "My Plugin",          // Your plugin's display name
+  slug: "myplugin",           // What your users will type in
   store: {
     usingStore: false/true
   }
 });
+
 */
 
 // Easily configures any plugin for easy usage

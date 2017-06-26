@@ -1,3 +1,6 @@
+// Copyright (c) 2017 Kevin Mo. All rights reserved.
+// Slack is a property of Slack Technologies, Inc
+
 // Libraries
 var _  = require('underscore');
 var plugin = require('./plugin');
@@ -44,11 +47,14 @@ exports.execute = function(route) {
   } else {
     // Find subdomain based on shortcut
     route = route.toLowerCase();
-    subdomain = _.where(storage.getValue(exports, 'teams').data, {shortcut: route})[0].subdomain;
+
+    var team = _.where(storage.getValue(exports, 'teams').data, {shortcut: route})[0];
+    subdomain = team.subdomain;
+    display = team.displayName;
   }
 
   // Redirect to subdomain
-  out.print(this, "Redirecting to https://"+subdomain+".slack.com...");
+  out.print(this, "Redirecting to "+display+" (https://"+subdomain+".slack.com)...");
   out.openURL("https://"+subdomain+".slack.com");
 }
 
